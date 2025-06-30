@@ -12,28 +12,14 @@ cs2.detectable_colors(colors)
 
 #funçoes de detecçao das cores dos trens👍
 
-def get_train_color:
-    lastColor = cs2.color()
+def azul(): andar(45)
+def amarelo(): andar(25)
+def cinza(): andar(15)
+def verde(): andar(35)
 
-def find_train_color:
-    andar()
-    get_train_color()
-
-def make_train(Lado):
-    lado = Lado
-    match lado:
-        case 1:
-            lado*1
-        case 2:
-            lado*-1
-    
-def delivery_train:
-    match lastColor:
-        case Color.GRAY:
-            andar(10*lado)
-        case Color.YELLOW:
-            andar(20*lado)
-        case Color.GREEN:
-            andar(30*lado)
-        case Color.BLUE:
-            andar(50*lado)    
+acoes = {
+    Color.BLUE: azul,
+    Color.YELLOW: amarelo,
+    Color.RED: cinza,
+    Color.GREEN: verde
+}
