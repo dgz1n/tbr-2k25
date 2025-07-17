@@ -11,6 +11,7 @@ me = Motor(Port.A, Direction.COUNTERCLOCKWISE)
 md = Motor(Port.B)
 cs1 = ColorSensor(Port.C)
 cs2 = ColorSensor(Port.E)
+sfl = ColorSensor(Port.D)
 
 drive_base = DriveBase(me, md, 54, 116) 
 drive_base.use_gyro(True)
@@ -26,12 +27,3 @@ def turn(radius, angle):
 def rotate(graus):
     drive_base.settings(220, 220, 220, 220)
     drive_base.turn(graus)
-
-def teste():
-    wait(200)
-    if sensor.color() == Color.BLUE:
-        andar(-40)
-    else:
-        wait (300)
-        claw()
-        rotate(90)
