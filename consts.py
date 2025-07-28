@@ -3,7 +3,7 @@ from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSenso
 from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
 from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch
-from Drive_Train import claw, andar, turn, rotate, cs1, cs2, sfl
+from Drive_Train import claw, andar, turn, rotate, cs2, sfl
 
 hub = PrimeHub()
 
@@ -12,16 +12,16 @@ colors = (Color.GREEN, Color.BLUE, Color.GRAY, Color.YELLOW)
 #andar(25) -> trem amarelo
 #andar(35) -> trem verde
 #andar(45) -> trem azul
+#andar(30) -> sair da plataforma(com a regua)
 
 def Open():
   claw.run_target(2000, 0)
 
 def close():
-    claw.run_target(2000, -20)
+    claw.run_target(2000, 120)
 
 def low():
-    andar(5)
-    claw.run_target(2000, 70)
+    claw.run_target(2000, 200)
 
 def mid():
 
@@ -33,15 +33,4 @@ def deposit():
 
 limit = 35
 
-while True:
-    reflecao = sfl.reflection()
-
-    if reflecao < limit:
-        cor_detectada = "preto"
-    
-    else:
-        cor_detectada = "branco"
-        
-    print("Cor detectada", cor_detectada, "Reflection", reflecao)
-    
-        
+mid()
