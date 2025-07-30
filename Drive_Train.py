@@ -9,7 +9,6 @@ claw = Motor(Port.F, Direction.CLOCKWISE)
 claw.brake
 me = Motor(Port.A, Direction.COUNTERCLOCKWISE)
 md = Motor(Port.B)
-flcs = ColorSensor(Port.D)
 upcs = ColorSensor(Port.C)
 
 drive_base = DriveBase(me, md, 54, 116) 
