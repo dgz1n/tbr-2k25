@@ -9,9 +9,9 @@ claw = Motor(Port.F, Direction.CLOCKWISE)
 claw.brake
 me = Motor(Port.A, Direction.COUNTERCLOCKWISE)
 md = Motor(Port.B)
-upcs = ColorSensor(Port.C)
+cancela = Motor(Port.C)
 
-drive_base = DriveBase(me, md, 54, 116) 
+drive_base = DriveBase(me, md, 54, 115) 
 drive_base.use_gyro(True)
 
 def andar(dist):

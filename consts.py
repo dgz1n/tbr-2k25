@@ -3,7 +3,7 @@ from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSenso
 from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
 from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch
-from Drive_Train import claw, andar, turn, rotate, upcs
+from Drive_Train import claw, andar, turn, rotate, cancela
 
 hub = PrimeHub()
 
@@ -29,3 +29,14 @@ def mid():
 def deposit():
     claw.run_target(1800, 500)
 
+def cancela_esquerda():
+    cancela.run_target(1800, 200)
+
+def volta_esquerda():
+    cancela.run_target(1800, -30)
+
+def cancela_direita():
+    cancela.run_target(1800, -320)
+
+def volta_direita():
+    cancela.run_target(200, 1)

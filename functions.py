@@ -3,18 +3,29 @@ from pybricks.pupdevices import Motor, ColorSensor, UltrasonicSensor, ForceSenso
 from pybricks.parameters import Button, Color, Direction, Port, Side, Stop
 from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch
-from Drive_Train import claw, andar, upcs, turn, rotate
+from Drive_Train import claw, andar, turn, rotate
 
 hub = PrimeHub()
-detect = upcs.color()
-upcs = ColorSensor(Port.C)
+#upcs = ColorSensor(Port.C)
 
 #funçoes de detecçao das cores dos trens👍
 
-def azul(): andar(45)
-def amarelo(): andar(25)
-def cinza(): andar(15)
-def verde(): andar(35)
+def azul(): 
+    andar(45)
+    wait(500)
+    andar(-25)
+#girar 90° positivo ou negativo(ao final)
+def amarelo(): 
+    andar(25)
+#girar 90° positivo ou negativo(ao final)
+def cinza(): 
+    andar(15)
+#girar 90° positivo ou negativo(ao final)
+def verde(): 
+    andar(35)
+    wait(500)
+    andar(-10)
+#girar 90° positivo ou negativo(ao final)
 
 acoes = {
     Color.BLUE: azul,
@@ -22,6 +33,3 @@ acoes = {
     Color.RED: cinza,
     Color.GREEN: verde
 }
-
-cor = upcs.color()
-acoes[cor]()
