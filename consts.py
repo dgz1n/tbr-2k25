@@ -18,25 +18,25 @@ def Open():
   claw.run_target(2000, 0)
 
 def close():
-    claw.run_target(2000, 240)
+    claw.run_target(2000, 100)
 
 def low():
-    claw.run_target(2000, 280)
+    claw.run_target(2000, 130)
 
 def mid():
-    claw.run_target(2000, 340)
+    claw.run_target(2000, 220)
 
 def deposit():
-    claw.run_target(1800, 500)
+    claw.run_target(1800, 600)
 
 def cancela_esquerda():
-    cancela.run_target(1800, 200)
+    cancela.run_angle(1800, 180)
 
 def volta_esquerda():
-    cancela.run_target(1800, -30)
+    cancela.run_angle(1800, -105)
 
 def cancela_direita():
-    cancela.run_target(1800, -320)
+    cancela.run_angle(1800, -180)
 
 def volta_direita():
-    cancela.run_target(200, 1)
+    cancela.run_angle(1800, 150)

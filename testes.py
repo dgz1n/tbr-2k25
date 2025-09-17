@@ -5,7 +5,6 @@ from pybricks.robotics import DriveBase
 from pybricks.tools import wait, StopWatch
 from Drive_Train import andar, rotate, turn
 from consts import Open, close, low, mid, deposit, cancela_esquerda, cancela_direita, volta_direita, volta_esquerda
-from functions import acoes
 
 hub = PrimeHub()
 
@@ -17,7 +16,8 @@ hub = PrimeHub()
 
 
 #low()andar(-15)rotate(90)andar(50)rotate(-90)andar(44)rotate(90)andar(3)Open()
-
-cancela_direita()
-wait(1000)
-volta_direita()
+low()
+wait(300)
+andar(20)
+rotate(-90)
+andar(32)
